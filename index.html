@@ -1,19 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projecte 1</title>
+    <link href="output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projecte 1</title>
-  <link href="output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <header>
+      <nav class="bg-custom-dark-red fixed top-0 left-0 w-full flex justify-between items-center h-10 px-4 md:px-20 text-custom-white z-50">
+        <h1 class="font-vollkorn font-medium text-lg">Rocketeer</h1>
+        <div class="md:flex hidden space-x-10 font-raleway font-normal text-base">
+          <ul class="flex space-x-10">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#view-product">View Product</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden">
+          <label for="menu-toggle" class="cursor-pointer">
+            <div class="w-6 h-1 bg-white mb-1"></div>
+            <div class="w-6 h-1 bg-white mb-1"></div>
+            <div class="w-6 h-1 bg-white"></div>
+          </label>
+          <ul class="absolute bg-custom-dark-red right-0 w-40 mt-2 hidden md:hidden" id="menu">
+            <li class="px-4 py-2"><a href="#home">Home</a></li>
+            <li class="px-4 py-2"><a href="#about-us">About us</a></li>
+            <li class="px-4 py-2"><a href="#view-product">View Product</a></li>
+            <li class="px-4 py-2"><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-<body>
+    <section id="home" class="flex  flex-col md:flex-row min-h-screen pt-10">
+      <div class="flex-grow bg-custom-gradient">
+        <div
+          id="home-text"
+          class="font-raleway text-custom-white relative z-50 mx-4 md:mx-20"
+        >
+          <h1 class="text-5xl md:text-9xl text-center md:text-left mt-32 ">
+            <span class="font-light"
+              >The future <br />
+              is</span
+            >
+            <span class="font-bold">now</span>
+          </h1>
+          <p class="font-light mt-10">
+            Rocketeer helmets is a visionary enterprise that is trying to <br />
+            improve your health by building modern and comfortable <br />
+            helmets for you.
+          </p>
+          <form
+            class="flex flex-col items-start mt-10 z-40"
+            action="/submit-email"
+            method="POST"
+          >
+            <label for="email" class="font-raleway text-white font-light mb-2"
+              >Enter your email to get the latest news</label
+            >
+            <div class="flex flex-col md:flex-row items-start w-full">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="Enter your email here"
+                class="bg-custom-wine-red border-none rounded-md w-full md:w-96 h-10 px-4 py-2 mb-2 md:mb-0"
+                required
+              />
 
-</body>
+              <button type="submit" class="button md:mt-0">
+                Submit
+              </button> 
+            </div>
+          </form>
+        </div>
+      </div>
 
+      <div
+        class="absolute w-[700px] h-[700px] rounded-full bg-custom-radial left-[-200px] top-[-200px] opacity-50 elipses"
+      ></div>
+
+      <div
+        class="absolute w-[1000px] h-[1000px] rounded-full bg-gradient-to-b from-custom-burgundy to-custom-charcoal opacity-5 left-[-300px] bottom-[-400px] elipses"
+      ></div>
+
+      <img
+        src="assets/homeImg.png"
+        alt="Astronaut Helmet"
+        class="object-cover w-2/5 min-h-screen ml-auto hidden md:block"
+      />
+    </section>
+    
+    <section
+  id="about-us"
+  class="relative overflow-hidden flex flex-col items-center justify-center bg-custom-gradient min-h-screen"
+>
+  <div
+    class="absolute flex flex-col items-center justify-center text-center font-raleway text-white px-4 z-50"
+  >
+    <h2 class="text-4xl font-bold mb-4">About us</h2>
+    <h3 class="text-2xl mb-4">
+      Our mission is to change the way you explore space
+    </h3>
+    <p class="max-w-2xl mb-10 text-base md:text-base"> 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo eget
+      magna fermentum iaculis eu non diam phasellus. Sagittis orci a
+      scelerisque purus semper eget. Auctor neque vitae tempus quam
+      pellentesque nec nam aliquam. Non curabitur gravida arcu ac tortor.
+      Penatibus et magnis dis parturient montes. Aliquam sem fringilla ut
+      morbi tincidunt augue. Dictumst quisque sagittis purus sit amet
+      volutpat consequat mauris nunc. Nunc sed id semper risus in hendrerit
+      gravida rutrum. Senectus et netus et malesuada. Ornare arcu dui
+      vivamus arcu felis. Purus semper eget duis at.
+    </p>
+  </div>
+
+  <img
+    src="assets/aboutUsImg.png"
+    alt=""
+    class="relative z-40 w-4/5 md:w-3/5 object-cover mt-10 hidden md:block"
+  />
+</section>
+
+    <section
+      id="view-product"
+      class="flex justify-center bg-custom-gradient min-h-screen"
+    >
+      <div class="flex items-center justify-center space-x-64">
+        <img src="assets/productImgR.png" alt="" class="h-96 w-64 rounded-lg" />
+        <div class="font-raleway text-white text-center">
+          <h2 class="font-raleway text-2xl font-medium">
+            Advanced communications system
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br />
+            sed do eiusmod tempor incididunt ut labore et dolore <br />
+            magna aliqua. Justo eget magna fermentum iaculis eu <br />
+            non diam phasellus.
+          </p>
+          <button
+            type="submit"
+            class="button"
+          >
+            Buy now ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="aditional-product-info"
+      class="flex justify-center bg-custom-gradient  min-h-screen"
+    >
+      <div class="flex items-center justify-center space-x-64">
+        <div class="font-raleway text-white text-center">
+          <h2 class="font-raleway text-2xl font-medium">
+            Advanced communications system
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br />
+            sed do eiusmod tempor incididunt ut labore et dolore <br />
+            magna aliqua. Justo eget magna fermentum iaculis eu <br />
+            non diam phasellus.
+          </p>
+          <button
+            type="submit"
+            class="button"
+          >
+            Buy now ➔
+          </button>
+        </div>
+
+        <img src="assets/productImgL.png" alt="" class="h-96 w-64 rounded-lg" />
+      </div>
+    </section>
+
+    <section
+    id="pricing"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center bg-custom-gradient"
+  >
+  <div class="pricing-card shadow-glow-left-bottom space-y-8">
+    <h2 class="px-4 py-2">Basic</h2>
+    <div class="px-4 space-y-2">
+      <p>diam maecenas ultricies mi</p>
+      <p>semper risus in hendrerit</p>
+      <p>ultricies integer quis</p>
+      <p>vitae auctor eu augue</p>
+      <p>faucibus interdum</p>
+      <p>faucibus interdum posuere lorem</p>
+    </div>
+    <span class="px-4 py-2 text-2xl">$230</span>
+  </div>
+  
+  
+    <div class="pricing-card shadow-glow-left-bottom space-y-6">
+      <h2 class="px-4 py-2">Premium</h2>
+      <div class="px-4 space-y-2">
+        <p>diam maecenas ultricies mi</p>
+        <p>semper risus in hendrerit</p>
+        <p>ultricies integer quis</p>
+        <p>vitae auctor eu augue</p>
+        <p>faucibus interdum</p>
+        <p>faucibus interdum posuere lorem</p>
+      </div>
+      <span class="px-4 py-2 text-2xl">$500</span>
+    </div>
+  
+    <div class="pricing-card shadow-glow-left-bottom space-y-6">
+      <h2 class="px-4 py-2">Pro</h2>
+      <div class="px-4 space-y-2">
+        <p>diam maecenas ultricies mi</p>
+        <p>semper risus in hendrerit</p>
+        <p>ultricies integer quis</p>
+        <p>vitae auctor eu augue</p>
+        <p>faucibus interdum</p>
+        <p>faucibus interdum posuere lorem</p>
+      </div>
+      <span class="px-4 py-6 text-2xl">$860</span>
+    </div>
+  </section>
+  
+
+    <footer   class="bg-custom-dark-red w-full flex justify-between items-center h-10 px-20 text-custom-white">
+      <div class=""><p>© 2021 · Rocketeer</p></div>
+      <div class="flex space-x-4">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/twitter.png" alt="Twitter" class="h-6 w-6 hover:opacity-80" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/facebook.png" alt="Facebook" class="h-6 w-6 hover:opacity-80" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/instagram.png" alt="Instagram" class="h-6 w-6 hover:opacity-80" />
+        </a>
+    </footer>
+  </body>
 </html>
